@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://sfdccrutch/locale/sfdccrutch.dtd">
+
+<?xml-stylesheet href="chrome://sfdccrutch/skin/" type="text/css"?>
+
+<overlay id="overlay-sfdccrutch" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script src="chrome://sfdccrutch/content/overlay.js" type="text/javascript" />
+	
+	<script type="text/javascript">
+    	window.addEventListener("load", SFDCCRUTCH.onOverlayLoad, false);
+    	window.addEventListener("unload", SFDCCRUTCH.onOverlayUnload, false);
+  </script>
+
+	<popup id="contentAreaContextMenu" >
+	   <menuseparator insertafter="context-selectall" />
+     <menuitem  id="sfdccrutch-load-caseorjira-menu" label="dummycase" style="display:none;color:blue;"
+            insertafter="context-selectall"/>
+     <menu  id="sfdccrutch-add-case-comment-menu" label="Add SFDC comment"  style="color:blue;"
+            insertafter="context-selectall"/>
+    <menuseparator insertafter="context-selectall" />
+  </popup>
+</overlay>

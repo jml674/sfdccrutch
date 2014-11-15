@@ -1,0 +1,17 @@
+.icoSfdccrutchSmall {
+	list-style-image: url("images/sfdccrutch_ico32.png");
+	max-height: 16px;
+	max-width: 16px;
+}
+
+.icoReset {
+	list-style-image: url("images/reset.png");
+	min-height: 20px;
+	min-width: 20px;
+
+}
+
+.icoReset:hover {
+	cursor: pointer;
+  
+}

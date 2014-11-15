@@ -1,0 +1,121 @@
+<!ENTITY about "About...">
+<!ENTITY about.createdby "Created by:">
+<!ENTITY about.credits "Credits">
+<!ENTITY about.title "About SfdcCrutch">
+<!ENTITY alarm "Alarm">
+<!ENTITY alarm.no "No alarm">
+<!ENTITY alarm.remove "Remove alarm">
+<!ENTITY record.remove "Remove recording">
+<!ENTITY alarm.set "Set alarm">
+<!ENTITY alarm.set.daily "Set daily alarm">
+<!ENTITY record.set "Record">
+<!ENTITY alarm.set.weekly "Set weekly alarm">
+<!ENTITY alarm.started "Already started!">
+<!ENTITY alarms "Alarms">
+<!ENTITY alarms.all "All alarms">
+<!ENTITY alarms.past "Past alarms">
+<!ENTITY alarms.remove "Remove">
+<!ENTITY button.alarm "Alarm">
+<!ENTITY button.cancel "Cancel">
+<!ENTITY button.ok "OK">
+<!ENTITY button.reload "Reload">
+<!ENTITY button.options "Options">
+<!ENTITY button.listings "Listings">
+<!ENTITY button.homecinema "Media">
+<!ENTITY button.search "Search">
+<!ENTITY category.title "Category:">
+<!ENTITY changelog "Changelog">
+<!ENTITY channels.moveup "Up">
+<!ENTITY channels.movedown "Down">
+<!ENTITY channels.select "Select your channels">
+<!ENTITY channels.selected "Selected">
+<!ENTITY channels.show "Show:">
+<!ENTITY contact "Contact">
+<!ENTITY country.france "France">
+<!ENTITY country.italy "Italy">
+<!ENTITY country.select "Select your country">
+<!ENTITY country.usa "USA">
+<!ENTITY email "E-mail">
+<!ENTITY help "Help">
+<!ENTITY help.need "Need help?">
+<!ENTITY homepage "Home Page">
+<!ENTITY license "License">
+<!ENTITY loading "Loading...">
+<!ENTITY options.alarm.triggerbefore.1 "Trigger alarm">
+<!ENTITY options.alarm.triggerbefore.2 "minutes before program starts">
+<!ENTITY options.sound "Sound">
+<!ENTITY options.sound.mute "Mute">
+<!ENTITY options.sound.default "Default sound">
+<!ENTITY options.sound.custom "Custom sound:">
+<!ENTITY options.sound.select "Select...">
+<!ENTITY options.sound.test "Test">
+<!ENTITY options.time "Time">
+<!ENTITY options.timeformat "Format">
+<!ENTITY options.timezone "Timezone">
+<!ENTITY options.timezone.system "Use system timezone:">
+<!ENTITY options.timezone.different "Use a different timezone:">
+<!ENTITY program.selected "Selected program">
+<!ENTITY questions "Questions and/or comments?">
+<!ENTITY range.all "All">
+<!ENTITY range.now "Now">
+<!ENTITY range.tonight "Primetime">
+<!ENTITY search.emptytext "Type at least 3 letters">
+<!ENTITY settings "Settings...">
+<!ENTITY settings.advanced "Advanced">
+<!ENTITY settings.channels.click "Use Ctrl key for multiple selection.">
+<!ENTITY settings.main "Main">
+<!ENTITY settings.title "SfdcCrutch Settings">
+<!ENTITY settings.welcome "Welcome to SfdcCrutch!">
+<!ENTITY sidebar.toggle "Toggle sidebar">
+<!ENTITY thanks.to "Thanks to:">
+<!ENTITY time.title "Time:">
+<!ENTITY timezone.list "List of time zones">
+<!ENTITY title.title "Title:">
+<!ENTITY today "Today">
+<!ENTITY tooltip.scraper "Scraper">
+<!ENTITY tooltip.note "Left-click to toggle sidebar / Right-click to open menu">
+<!ENTITY version "Version">
+<!ENTITY options.debug.level "Level">
+<!ENTITY options.debug.clearlogfile "Clear logfile">
+<!ENTITY options.debug.sendlogfile "Send logfile">
+<!ENTITY options.debug.clearatstart "Clear logfile when starting">
+<!ENTITY options.debug.logdetails "Please provide comments associated to the logs you are sending:">
+<!ENTITY fullscreen.browser1.title "User">
+<!ENTITY fullscreen.browser2.title "Advised">
+<!ENTITY fullscreen.browser3.title "Commercial">
+<!ENTITY playerversion "vlc Version">
+<!ENTITY settings.multiplexprovider "Search TNTtest">
+<!ENTITY settings.multiplexmenu "DVB-T frequency server">
+<!ENTITY recording "Record">
+<!ENTITY options.recording.triggerbefore.1 "Start recording">
+<!ENTITY browse "Browse">
+<!ENTITY directory "Directory:">
+<!ENTITY vo.language.title "Original Version:">
+<!ENTITY vo.language.subtitle.english "Subtitles:">
+<!ENTITY vo.language.audio.applytolanguage "Switch automatically audio for:">
+<!ENTITY vo.language.subtitle.applylanguagetrack "Switch subtitle to:">
+<!ENTITY vo.language.language "Language">
+<!ENTITY type.all "All">
+<!ENTITY type.main "Main chanels">
+<!ENTITY type.tnt "dvb-t">
+<!ENTITY type.cinema "Cinema">
+<!ENTITY type.entertainment "Entertainment">
+<!ENTITY type.info "Information">
+<!ENTITY type.sport "Sport">
+<!ENTITY type.kids "Kids">
+<!ENTITY type.magazine "Documentaries">
+<!ENTITY type.music "Music">
+<!ENTITY type.others "Others">
+<!ENTITY record.starttime "Start time">
+<!ENTITY record.stoptime "Stop time">
+<!ENTITY findreplay "Replay">
+<!ENTITY stopfindreplay  "Stop replay search">
+<!ENTITY options.useStreamingServer "Streaming server">
+<!ENTITY options.useStreamingServerUrl "Stream from:">
+<!ENTITY interactivity.title "Interactivity">
+<!ENTITY interactivity.useOneTab "Use only one tab">
+<!ENTITY interactivity.openAdvisedOnLeftClick "Open advised url on left-click">
+<!ENTITY homemedia.title "Media">
+<!ENTITY homemedia.path "Server path:">
+<!ENTITY homemedia.dvdpath "Dvd:">
+<!ENTITY homemedia.mediastartfullscreen "Start in fullscreen:">

@@ -1,0 +1,6 @@
+content		sfdccrutch	chrome/content/ 
+locale		sfdccrutch	en-US	chrome/locale/en-US/
+
+resource	sfdccrutch	resources/
+skin		sfdccrutch	classic/1.0	chrome/skin/
+overlay	chrome://browser/content/browser.xul	chrome://sfdccrutch/content/overlay.xul

@@ -1,0 +1,5 @@
+
+var EXPORTED_SYMBOLS = ["SFDCCRUTCH"];
+
+// SFDCCRUTCH namespace
+var SFDCCRUTCH = {};

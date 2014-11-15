@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://sfdccrutch/skin/alert.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://sfdccrutch/locale/sfdccrutch.dtd">
+
+<window id="sfdccrutch-window-alert" title="Cases about to be expired"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		style="min-width:40em;max-width:40em;max-height:20em;min-height:10em;"
+
+	onload="SFDCCRUTCH.onAlertLoad()">
+	
+	<script src="chrome://sfdccrutch/content/alert/alert.js" type="text/javascript" />
+
+	  <vbox id="vbox-alarms" class="box-alam1" flex="1">
+	   	<scrollbox id="scrollbox-alarms" style="overflow:scroll" orient="vertical" flex="1">
+      </scrollbox>
+
+	  </vbox>
+	  <button  label="OK" oncommand="closeAlert();"   />
+</window>

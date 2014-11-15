@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://sfdccrutch/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://sfdccrutch/skin/settings.css" type="text/css"?>
+<?xml-stylesheet href="chrome://sfdccrutch/skin/channels.css" type="text/css"?>
+<?xml-stylesheet href="chrome://sfdccrutch/skin/sidebar.css" type="text/css"?>
+
+
+<!DOCTYPE prefwindow [
+<!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd">
+    %globalDTD;
+<!ENTITY % myextensionDTD SYSTEM "chrome://sfdccrutch/locale/sfdccrutch.dtd">
+  %myextensionDTD;
+ <!ENTITY % htmlDTD PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+    %htmlDTD;
+]>
+
+
+
+<prefwindow id="settings-sfdccrutch" title="&settings.title;"
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+     style="max-height:45em"
+     onload="SFDCCRUTCH.showuploadinglogfile(false);SFDCCRUTCH.enableSendLogfileButton();"
+     buttons="accept,cancel"
+     ondialogaccept="return SFDCCRUTCH.settingsDoOK();"
+
+     >
+  <prefpane id="mainPane" label="Main" image="chrome://scraper/skin/images/settings_main.png">
+		<preferences>
+			<preference name="extensions.sfdccrutch.template.action" type="string" id="actionAndOwner" />
+			<preference name="extensions.sfdccrutch.template.assignment" type="string" id="assignmentsubject" />
+			<preference name="extensions.sfdccrutch.template.signature" type="string" id="signature" />
+			<preference name="extensions.sfdccrutch.template.screening.default" type="string" id="screeningDefault" />
+			<preference name="extensions.sfdccrutch.template.screening.requestInfo" type="string" id="screeningRequestInfo" />
+			<preference name="extensions.sfdccrutch.template.emailsubject" type="string" id="emailsubject" />
+  		<preference name="extensions.sfdccrutch.dayinc.BC" type="int" id="dayincbc" />
+  		<preference name="extensions.sfdccrutch.dayinc.major" type="int" id="dayincmajor" />
+  		<preference name="extensions.sfdccrutch.dayinc.minor" type="int" id="dayincminor" />
+   		<preference name="extensions.sfdccrutch.dayinc.weekdays" type="string" id="weekdays" />
+  		<preference name="extensions.sfdccrutch.alarm.daysbefore.BC" type="int" id="daybeforealarmbc" />
+  		<preference name="extensions.sfdccrutch.alarm.daysbefore.major" type="int" id="daybeforealarmmajor" />
+  		<preference name="extensions.sfdccrutch.alarm.daysbefore.minor" type="int" id="daybeforealarmminor" />  		
+		</preferences>
+   	<scrollbox id="scrollbox-pane" style="overflow:scroll;max-height:35em" orient="vertical" flex="2">
+
+		<groupbox flex="1">
+      <caption label="Working days" />
+      <radiogroup id="group-weekdays" orient="horizontal" preference="weekdays">
+              <radio label="Mon-Fri" value="M-F" />
+              <radio label="Sun-Thu" value="S-T" />
+              <radio label="Mon-Sun" value="M-S" />
+       </radiogroup>
+    </groupbox>
+		<groupbox>
+			<caption label="Note templates" />
+			<vbox>
+        <hbox>
+				  <label value="Regular" />
+			    <image class="icoReset" tooltiptext="Reset to default" onclick="SFDCCRUTCH.Pref.resetToDefault('extensions.sfdccrutch.template.action',document.getElementById('actionAndOwner'));"/>
+				</hbox>
+				<textbox id="actionAndOwner" flex="1" multiline="true" value="" rows="5" preference="actionAndOwner" />
+			</vbox>
+			<vbox>
+        <hbox>
+          <label value="Assignment" />
+          <image class="icoReset" tooltiptext="Reset to default" onclick="SFDCCRUTCH.Pref.resetToDefault('extensions.sfdccrutch.template.assignment',document.getElementById('assignmentsubject'));"/>
+				</hbox>
+				<textbox id="assignmentsubject" flex="1" multiline="true" value="" rows="4" preference="assignmentsubject" />
+			</vbox>
+			<vbox>
+        <hbox>
+          <label value="Signature" />
+          <image class="icoReset" tooltiptext="Reset to default" onclick="SFDCCRUTCH.Pref.resetToDefault('extensions.sfdccrutch.template.signature',document.getElementById('signature'));"/>
+				</hbox>
+				<textbox id="signature" flex="1" multiline="true" value="" rows="1" preference="signature" />
+			</vbox>	
+			<vbox>
+        <hbox>
+          <label value="Email subject" />
+          <image class="icoReset" tooltiptext="Reset to default" onclick="SFDCCRUTCH.Pref.resetToDefault('extensions.sfdccrutch.template.emailsubject',document.getElementById('emailsubject'));"/>
+				</hbox>
+				<textbox id="emailsubject" flex="1" multiline="true" value="" rows="1" preference="emailsubject" />
+			</vbox>
+		</groupbox>
+		<groupbox>
+			<caption label="Increment to current next update date (days)" />
+			<hbox>
+        <label value="BC" />
+		   	<textbox size="2" preference="dayincbc" />
+			  <label value="Major" />
+		   	<textbox size="2" preference="dayincmajor" />
+		   	<label value="Minor" />
+		   	<textbox size="2" preference="dayincminor" />
+			</hbox>
+
+    </groupbox>
+		<groupbox>
+			<caption label="Alarm before expiration(days)" />
+			<hbox>
+        <label value="BC" />
+		   	<textbox size="2" preference="daybeforealarmbc" />
+			  <label value="Major" />
+		   	<textbox size="2" preference="daybeforealarmmajor" />
+		   	<label value="Minor" />
+		   	<textbox size="2" preference="daybeforealarmminor" />
+			</hbox>
+    </groupbox>
+		<groupbox>
+			<caption label="Screening templates" />
+			<vbox>
+        <hbox>
+          <label value="Default" />
+          <image class="icoReset" tooltiptext="Reset to default" onclick="SFDCCRUTCH.Pref.resetToDefault('extensions.sfdccrutch.template.screening.default',document.getElementById('screeningDefault'));"/>
+				</hbox>
+				<textbox id="screeningDefault" flex="1" multiline="true" value="" rows="4" preference="screeningDefault" />
+			</vbox>
+			<vbox>
+        <hbox>
+          <label value="Request Info" />
+				  <image class="icoReset" tooltiptext="Reset to default" onclick="SFDCCRUTCH.Pref.resetToDefault('extensions.sfdccrutch.template.screening.requestInfo',document.getElementById('screeningRequestInfo'));"/>
+				</hbox>
+
+				<textbox id="screeningRequestInfo" flex="1" multiline="true" value="" rows="2" preference="screeningRequestInfo" />
+			</vbox>
+		</groupbox>		
+  </scrollbox>
+
+	</prefpane>
+	<prefpane id="filterPane" label="Filter" image="chrome://sfdccrutch/skin/images/bottleneck48x48.png">
+    <preferences>
+			<preference name="extensions.sfdccrutch.domainsToIntercept" type="string" id="domainsToIntercept" />
+		</preferences>
+		
+    <groupbox>
+			<caption label="Domains to intercept" />
+			<textbox id="domainsToIntercept" flex="1" multiline="true" value="" rows="4" preference="domainsToIntercept" />
+		</groupbox>	
+	</prefpane>
+	   	
+	<prefpane id="debugPane" label="Debug" image="chrome://sfdccrutch/skin/images/debug.png">
+		<preferences>
+			<preference name="extensions.sfdccrutch.loglevel" type="int" id="loglevel" />
+			<preference name="extensions.sfdccrutch.clearlogfileatstarttime" type="bool" id="clearatstart" />			
+			<preference name="extensions.sfdccrutch.installdir" type="string" id="installdir" />
+		</preferences>
+		<groupbox>
+			<caption label="Log" />
+			<hbox align="center">
+				<label value="&options.debug.level;" />
+				<textbox type="number" min="0" max="4" size="2" preference="loglevel" />
+				<button label="&options.debug.clearlogfile;" oncommand="SFDCCRUTCH.ClearLogFile();" />
+				<button id="sendLogfileButton" label="Send logs" oncommand="SFDCCRUTCH.SendLogFile();" />
+				<checkbox label="&options.debug.clearatstart;" preference="clearatstart" />
+			</hbox>
+			<vbox>
+			  <label id="logdetailstitle" value="Please provide details about the log file you're about to send:" />
+			  <textbox id="logdetails" flex="1" multiline="true" value="" rows="10" />
+			</vbox>
+			
+		
+		</groupbox>
+		<groupbox>
+			<caption label="Installation directory" />
+			<textbox size="42" preference="installdir" readonly="false"/>
+    </groupbox>
+		
+	</prefpane>
+		
+		
+	<script src="chrome://sfdccrutch/content/preferences.js" type="text/javascript" />
+	<script src="chrome://sfdccrutch/content/settings/settings.js" type="text/javascript" />
+
+</prefwindow>
